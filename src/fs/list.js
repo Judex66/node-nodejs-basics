@@ -1,5 +1,12 @@
+import {readdir} from 'fs/promises';
 const list = async () => {
-    // Write your code here 
+    const fileWay = 'src/fs/files';
+    try {
+        console.log(await readdir(fileWay));
+    } catch (error) {
+        console.log("FS operation failed");
+        // console.log(error);
+    }
 };
 
 await list();
