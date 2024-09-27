@@ -4,7 +4,7 @@ const { createServer: createServerHttp } = require('http');
 require('./files/c');
 
 const random = Math.random();
-
+const PORT = 3000;
 let unknownObject;
 
 if (random > 0.5) {
@@ -24,7 +24,7 @@ const myServer = createServerHttp((_, res) => {
     res.end('Request accepted');
 });
 
-const PORT = 3000;
+
 
 console.log(unknownObject);
 
